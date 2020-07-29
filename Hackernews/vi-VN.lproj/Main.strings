@@ -1,0 +1,63 @@
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "31r-eF-fQN"; */
+"31r-eF-fQN.text" = "Time";
+
+/* Class = "UITabBarItem"; title = "Jobs"; ObjectID = "BzU-UJ-RSU"; */
+"BzU-UJ-RSU.title" = "Jobs";
+
+/* Class = "UILabel"; text = "Link"; ObjectID = "F4J-kn-PuU"; */
+"F4J-kn-PuU.text" = "Link";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Fqj-v8-kBm"; */
+"Fqj-v8-kBm.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "New Stories"; ObjectID = "GXx-v4-QHn"; */
+"GXx-v4-QHn.title" = "New Stories";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "HPv-Tl-XA8"; */
+"HPv-Tl-XA8.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "New Stories"; ObjectID = "K9a-eX-6NH"; */
+"K9a-eX-6NH.title" = "New Stories";
+
+/* Class = "UINavigationItem"; title = "Tin hàng đầu"; ObjectID = "M7K-VE-BLY"; */
+"M7K-VE-BLY.title" = "Tin hàng đầu";
+
+/* Class = "UILabel"; text = "Link"; ObjectID = "O7Y-bc-cxB"; */
+"O7Y-bc-cxB.text" = "Link";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Q2B-UP-0eQ"; */
+"Q2B-UP-0eQ.text" = "Title";
+
+/* Class = "UILabel"; text = "Link"; ObjectID = "VlQ-bw-ArC"; */
+"VlQ-bw-ArC.text" = "Link";
+
+/* Class = "UINavigationItem"; title = "Best Story"; ObjectID = "Xtb-ft-WdY"; */
+"Xtb-ft-WdY.title" = "Best Story";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "cKi-Z2-KhW"; */
+"cKi-Z2-KhW.text" = "Title";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "e8Y-si-bxG"; */
+"e8Y-si-bxG.text" = "Time";
+
+/* Class = "UINavigationItem"; title = "Jobs"; ObjectID = "iBU-N2-uJc"; */
+"iBU-N2-uJc.title" = "Jobs";
+
+/* Class = "UILabel"; text = "Link"; ObjectID = "j3h-Et-cx7"; */
+"j3h-Et-cx7.text" = "Link";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "nMq-5J-bQx"; */
+"nMq-5J-bQx.text" = "Time";
+
+/* Class = "UITabBarItem"; title = "Best Stories"; ObjectID = "pp8-bQ-qHX"; */
+"pp8-bQ-qHX.title" = "Best Stories";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "t6s-i1-ruL"; */
+"t6s-i1-ruL.text" = "Title";
+
+/* Class = "UITabBarItem"; title = "Top stories"; ObjectID = "trd-3r-kd2"; */
+"trd-3r-kd2.title" = "Top stories";
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "vJh-cB-r94"; */
+"vJh-cB-r94.text" = "Time";
