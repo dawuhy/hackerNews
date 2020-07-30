@@ -96,7 +96,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ios-25-gWH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Top stoties" id="M7K-VE-BLY"/>
+                    <navigationItem key="navigationItem" title="Top stoties" id="M7K-VE-BLY">
+                        <barButtonItem key="rightBarButtonItem" title="Clear history" id="Osr-Xg-Tyx">
+                            <connections>
+                                <action selector="clearHistoryTapped:" destination="B11-ES-Z89" id="zzQ-o8-yrG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="6bw-wf-DJK" id="uQS-ra-XPL"/>
                     </connections>

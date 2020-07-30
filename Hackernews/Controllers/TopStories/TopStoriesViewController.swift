@@ -10,7 +10,7 @@
 import UIKit
 import Moya
 
-class TopStoriesViewController: UIViewController, UITableViewDelegate {
+class TopStoriesViewController: UIViewController {
  
     var from = 0, to = 19
     var storiesDataSource: StoriestDataSource?
@@ -36,8 +36,6 @@ class TopStoriesViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-//        userDefault.removeObject(forKey: "DidReadId")
         if userDefault.array(forKey: "DidReadId") != nil {
             didReadId = userDefault.array(forKey: "DidReadId")!
         } else {
@@ -87,42 +85,10 @@ class TopStoriesViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        80
-    }
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        if tableView.contentOffset.y >= (tableView.contentSize.height - tableView.frame.size.height) {
-            fetchStories(from: &from, to: &to)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let story = listStory[indexPath.row]
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "webview") as! ReadStoryViewController
-        vc.urlString = story.url
-        print(story.id)
-        
-        var didRead = false
-        for id in didReadId {
-            if story.id == (id as! Int) {
-                didRead = true
-                break
-            }
-        }
-        if didRead == false {
-            didReadId.append(story.id)
-            userDefault.set(didReadId, forKey: "DidReadId")
-        }
-        
-        print("#############################")
-        print(didReadId.count)
-        print("#############################")
-        let selectedCell = tableView.cellForRow(at: indexPath)
-        selectedCell?.backgroundColor = .gray
-        
-        navigationController?.pushViewController(vc, animated: true)
+    @IBAction func clearHistoryTapped(_ sender: Any) {
+
+        didReadId = []
+        userDefault.set(didReadId, forKey: "DidReadId")
     }
     
     func fetchStories( from:inout Int, to:inout Int) {
@@ -175,5 +141,45 @@ class TopStoriesViewController: UIViewController, UITableViewDelegate {
         from += 20
         to += 20
         self.removeSpinner()
+    }
+}
+
+extension TopStoriesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        80
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y >= (tableView.contentSize.height - tableView.frame.size.height) {
+            fetchStories(from: &from, to: &to)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let story = listStory[indexPath.row]
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "webview") as! ReadStoryViewController
+        vc.urlString = story.url
+        print(story.id)
+        
+        var didRead = false
+        for id in didReadId {
+            if story.id == (id as! Int) {
+                didRead = true
+                break
+            }
+        }
+        if didRead == false {
+            didReadId.append(story.id)
+            userDefault.set(didReadId, forKey: "DidReadId")
+        }
+        
+        print("#############################")
+        print(didReadId.count)
+        print("#############################")
+        let selectedCell = tableView.cellForRow(at: indexPath)
+        selectedCell?.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
