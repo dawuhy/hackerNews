@@ -38,6 +38,7 @@ class StoryTableViewCell: UITableViewCell {
         labelTitle.textColor = myTextColor
         labelTime.textColor = mySubtitleColor
         labelLink.textColor = mySubtitleColor
+        
         for id in didReadId {
            if story.id == (id as! Int) {
                backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
