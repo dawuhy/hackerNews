@@ -71,7 +71,7 @@ class NewStoriesViewController: UIViewController, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let story = listStory[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "webview") as! ReadStoryViewController
+        let vc = sb.instantiateViewController(withIdentifier: "ReadStoryViewController") as! ReadStoryViewController
         vc.urlString = story.url
         
         navigationController?.pushViewController(vc, animated: true)

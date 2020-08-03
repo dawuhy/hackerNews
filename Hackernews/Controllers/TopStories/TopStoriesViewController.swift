@@ -158,17 +158,25 @@ extension TopStoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let story = listStory[indexPath.row]
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "webview") as! ReadStoryViewController
+        let vc = sb.instantiateViewController(withIdentifier: "ReadStoryViewController") as! ReadStoryViewController
         vc.urlString = story.url
         print(story.id)
         
-        var didRead = false
-        for id in didReadId {
-            if story.id == (id as! Int) {
-                didRead = true
-                break
+
+        let didRead = didReadId.contains { el in
+            if el as! Int == story.id {
+                return true
+            } else {
+                return false
             }
         }
+//        var didRead = false
+//        for id in didReadId {
+//            if story.id == (id as! Int) {
+//                didRead = true
+//                break
+//            }
+//        }
         if didRead == false {
             didReadId.append(story.id)
             userDefault.set(didReadId, forKey: "DidReadId")

@@ -45,4 +45,10 @@ class StoryTableViewCell: UITableViewCell {
            }
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        
+    }
 }
